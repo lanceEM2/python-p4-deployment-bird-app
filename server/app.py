@@ -3,6 +3,8 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
+print("DATABASE_URI:", os.environ.get('DATABASE_URI'))  # Add this line to debug
+
 from flask import Flask, jsonify, request, make_response, render_template
 from flask_migrate import Migrate
 from flask_restful import Api, Resource
